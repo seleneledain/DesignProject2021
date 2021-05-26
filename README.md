@@ -1,6 +1,6 @@
 # Design Project 2021
 
-by Maxwell Bergsteöm, Sélène Ledain 
+by Maxwell Bergström, Sélène Ledain 
 
 date: June 2021
 
@@ -26,7 +26,7 @@ For 'main_create_xml.ipynb' there is need of CitySim Pro which is distributed by
 * SATOM_data.ipynb
 * SATOM_linear_annual.ipynb
 * SATOM_linear_timeseries.ipynb
-* SATOM_randfomforest_annual.ipynb
+* SATOM_randomforest_annual.ipynb
 * SATOM_randomforest_timeseries.ipynb
 * SATOM_randomforest_annual_tuning_final.ipynb
 * SATOM_randomforest_timeseries_tuned_final.ipynb
