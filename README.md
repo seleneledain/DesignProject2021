@@ -9,7 +9,7 @@ date: June 2021
 
 This repository contains the scripts used for the Design Project 2021 "Machine Learning pour l’énergétique des bâtiments sur outil SIG" in collaboration between EPFL and Idiap.
 
-Please refer to the Report in the documentation for reference.
+Please refer to the Report for reference.
 
 ---
 
@@ -19,8 +19,7 @@ The following scripts are .ipynb (Jupyter Notebooks) files and must be opened wi
 For 'main_create_xml.ipynb' there is need of CitySim Pro which is distributed by Kaemco. Please visit http://www.kaemco.ch/download.php for further information.
 
 
---- 
-
+---
 ## File list
 * scrapper.ipynb
 * main_create_xml.ipynb
@@ -29,11 +28,16 @@ For 'main_create_xml.ipynb' there is need of CitySim Pro which is distributed by
 * SATOM_linear_timeseries.ipynb
 * SATOM_randfomforest_annual.ipynb
 * SATOM_randomforest_timeseries.ipynb
+* SATOM_randomforest_annual_tuning_final.ipynb
+* SATOM_randomforest_timeseries_tuned_final.ipynb
 * geometry_processor_db_2021.py
 * AllData_TH.tsv
 * Aigle_MeteoSchweiz_2019.cli
+* Aigle_MeteoSchweiz_2019_v2.cli
 * Martigny.cli
 * Martigny_to_3D.cli
+
+* Report 
     
 (Additional informative files)
 * Meteo_data.ipynb
@@ -80,14 +84,16 @@ Both the timeseries and the annual data are in the citydb.nrg8_time_series table
 
 
 ### SATOM_linear_annual.ipynb
-Contains the linear regression model trained on the SATOM annual data to predict annual energy demands. Uses the climatic file 'Aigle_MetoSchwiez_2019.cli'.
+Contains the linear regression model trained on the SATOM annual data to predict annual energy demands. Uses the climatic file 'Aigle_MetoSchwiez_2019_v2.cli'.
 
 ### SATOM_linear_timeseries.ipynb
-Contains the linear regression model trained on the SATOM timeseries data to predict energy demands at different times. Uses the climatic file 'Aigle_MetoSchwiez_2019.cli'.
+Contains the linear regression model trained on the SATOM timeseries data to predict energy demands at different times. Uses the climatic file 'Aigle_MetoSchwiez_2019_v2.cli'.
 
 ### SATOM_randfomforest_annual.ipynb
+Contains Random Forest model to predict annual energy demand on SATOM annual data. Uses the climatic file 'Aigle_MetoSchwiez_2019_v2.cli'.
 
 ### SATOM_randomforest_timeseries.ipynb
+Contains Random Forest model to predict energy demand at different timesteps on SATOM data. Uses the climatic file 'Aigle_MetoSchwiez_2019_v2.cli'.
 
 ###  geometry_processor_db_2021.py
 Auxiliary functions for the 'main_create_xml.ipynb'. In particular, allows to calculate geometric features and write the xml.
@@ -97,6 +103,9 @@ TSV table containing results of CitySim simulation using the XML and climate fil
 
 ###  Aigle_MeteoSchweiz_2019.cli
 Climate file for Aigle in 2019.
+
+###  Aigle_MeteoSchweiz_2019.cli
+Same file as 'Aigle_MetoSchwiez_2019.cli' but formatted to be read properly by the scripts.
 
 ###  Martigny.cli
 Climate file for Martigny in 2019.
